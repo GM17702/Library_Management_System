@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Update_Member_Details_Controller">
+  <children>
+    <ImageView fitHeight="720.0" fitWidth="1100.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/Background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="524.0" fitWidth="919.0" layoutX="91.0" layoutY="125.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/Text_Background.png" />
+      </image>
+    </ImageView>
+    <Text layoutX="194.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Search Type:">
+      <font>
+        <Font name="System Bold" size="19.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="247.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:" />
+    <ImageView fitHeight="193.0" fitWidth="136.4424144999186" layoutX="-42.0" layoutY="313.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/Side_Bar_Background.jpg" />
+      </image>
+    </ImageView>
+    <TextField fx:id="searchfield" layoutX="377.0" layoutY="301.0" prefHeight="41.0" prefWidth="418.0" promptText="Search" style="-fx-border-color: #800000;" />
+    <ScrollPane layoutX="169.0" layoutY="367.0" prefHeight="200.0" prefWidth="761.0" style="-fx-border-color: #800000;">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="searchmembertable" layoutX="0.0" layoutY="1.0" prefHeight="200.0" prefWidth="745.0" style="-fx-background-color: #FFFFE0;">
+              <columns>
+                <TableColumn fx:id="memberidcolumn" prefWidth="124.80001676082611" text="Member ID" />
+                <TableColumn fx:id="namecolumn" prefWidth="157.59998321533203" text="Name" />
+                <TableColumn fx:id="addresscolumn" maxWidth="5000.0" minWidth="6.0" prefWidth="251.20001220703125" text="Address" />
+                <TableColumn fx:id="phonenumcolumn" maxWidth="5000.0" minWidth="10.0" prefWidth="211.0" style="fx-background-color: #80000F;" text="Phone Number" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+      </content>
+    </ScrollPane>
+    <Text layoutX="419.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Member Details" underline="true">
+      <font>
+        <Font name="System Bold" size="24.0" />
+      </font>
+    </Text>
+    <Button fx:id="updatebutton" layoutX="503.0" layoutY="589.0" mnemonicParsing="false" onAction="#PerformUpdate" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #E9967A;" text="Update">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Button>
+    <MenuButton fx:id="searchtypebutton" layoutX="375.0" layoutY="228.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="418.0" style="-fx-background-color: #FFFFE0;" text="Select Search Type">
+      <items>
+        <MenuItem fx:id="nameoptionbutton" mnemonicParsing="false" onAction="#NameAction" text="Name" />
+        <MenuItem fx:id="memberidoptionbutton" mnemonicParsing="false" onAction="#MemberIDAction" text="MemberID" />
+      </items>
+    </MenuButton>
+    <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="17.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/fhome.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="18.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/admin-operations-icon.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="87.0" fitWidth="49.0" layoutX="9.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/signoutt.png" />
+      </image>
+    </ImageView>
+    <ToggleButton fx:id="hometoolbar" layoutX="14.0" layoutY="325.0" mnemonicParsing="false" onAction="#goToHome" opacity="0.0" prefHeight="39.0" prefWidth="57.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <ToggleButton fx:id="operationstoolbar" layoutX="14.0" layoutY="385.0" mnemonicParsing="false" onAction="#goToAOperation" opacity="0.0" prefHeight="50.0" prefWidth="58.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <ToggleButton fx:id="signouttoolbar" layoutX="9.0" layoutY="449.0" mnemonicParsing="false" onAction="#goToLogin" opacity="0.0" prefHeight="49.0" prefWidth="57.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <ImageView fitHeight="65.0" fitWidth="25.0" layoutX="759.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/search-image.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="searchbutton" layoutX="751.0" layoutY="302.0" mnemonicParsing="false" onAction="#PerformSearch" opacity="0.0" prefHeight="42.0" prefWidth="41.0" style="-fx-cursor: hand;" text="Button" />
+      <Label fx:id="errortext" layoutX="377.0" layoutY="344.0" prefHeight="18.0" prefWidth="418.0" />
+      <Label fx:id="updatetext" layoutX="169.0" layoutY="569.0" prefHeight="18.0" prefWidth="418.0" />
+  </children>
+</AnchorPane>

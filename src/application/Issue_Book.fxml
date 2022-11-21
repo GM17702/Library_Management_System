@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Issue_Book_Controller">
+   <children>
+      <ImageView fitHeight="727.0" fitWidth="1106.0" layoutX="-3.0" layoutY="-4.0">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/managebooks-addbook-pic.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="523.0" layoutX="208.0" layoutY="103.0" stroke="BLACK" strokeType="INSIDE" width="788.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7881773399014778" startY="0.06403940886699508">
+               <stops>
+                  <Stop color="#e0d690de" />
+                  <Stop color="#ae622bde" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="81.0" fitWidth="109.0" layoutX="256.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/logo-withoutbg.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="memberidfield" layoutX="394.0" layoutY="265.0" prefHeight="41.0" prefWidth="418.0" promptText="Member ID" style="-fx-border-color: #800000;" />
+      <Text layoutX="255.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="531.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISSUE BOOK" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="49.0" fitWidth="57.0" layoutX="5.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/fhome.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="hometoolbar" blendMode="SOFT_LIGHT" contentDisplay="CENTER" layoutX="-9.0" layoutY="299.0" mnemonicParsing="false" onAction="#goToAHome" prefHeight="57.0" prefWidth="81.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="1.99">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#241e1e85" />
+               </light>
+            </Lighting>
+         </effect></ToggleButton>
+      <ImageView fitHeight="49.0" fitWidth="57.0" layoutX="6.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/book%20operations.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="57.0" layoutX="1.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/signoutt.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="signouttoolbar" blendMode="SOFT_LIGHT" layoutX="-10.0" layoutY="421.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="57.0" prefWidth="81.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#241e1e" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ToggleButton>
+      <ToggleButton fx:id="operationstoolbar" blendMode="SOFT_LIGHT" layoutX="-10.0" layoutY="360.0" mnemonicParsing="false" onAction="#goToAOperation" prefHeight="57.0" prefWidth="81.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#241e1e" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ToggleButton>
+      <ScrollPane layoutX="281.0" layoutY="392.0" prefHeight="142.0" prefWidth="638.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="142.0" prefWidth="623.0">
+               <children>
+                  <TableView fx:id="searchtable" layoutX="-3.0" layoutY="1.0" prefHeight="142.0" prefWidth="627.0" style="-fx-background-color: #FFFFE0;">
+                     <columns>
+                        <TableColumn fx:id="isbncolumn" prefWidth="106.39996027946472" text="ISBN" />
+                        <TableColumn fx:id="namecolumn" prefWidth="149.60008239746094" text="Name" />
+                        <TableColumn fx:id="authorcolumn" minWidth="6.0" prefWidth="121.5999755859375" text="Author" />
+                        <TableColumn fx:id="publishercolumn" prefWidth="114.4000244140625" style="fx-background-color: #80000F;" text="Publisher" />
+                        <TableColumn fx:id="quantitycolumn" prefWidth="134.40008544921875" style="fx-background-color: #80000F;" text="Quantity" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <MenuButton fx:id="searchtypebutton" layoutX="395.0" layoutY="211.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="418.0" style="-fx-background-color: #FFFFE0;" text="Select Search Type">
+         <items>
+            <MenuItem fx:id="isbnoptionbutton" mnemonicParsing="false" onAction="#ISBNAction" text="ISBN" />
+            <MenuItem fx:id="nameoptionbutton" mnemonicParsing="false" onAction="#NameAction" text="Name" />
+         </items>
+      </MenuButton>
+      <Text layoutX="257.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Type:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="searchfield" layoutX="393.0" layoutY="318.0" prefHeight="41.0" prefWidth="418.0" promptText="Book Search" style="-fx-border-color: #800000;" />
+      <Text layoutX="267.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="772.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/asasasddsfdsffds-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="searchbutton" blendMode="HARD_LIGHT" layoutX="762.0" layoutY="319.0" mnemonicParsing="false" onAction="#PerformSearch" prefHeight="39.0" prefWidth="49.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ba7161" />
+               </light>
+            </Lighting>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </ToggleButton>
+      <ToggleButton fx:id="issuebutton" blendMode="HARD_LIGHT" layoutX="567.0" layoutY="573.0" mnemonicParsing="false" onAction="#PerformIssueBook" text="Issue">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="2.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="240.95" color="#75493ff5" elevation="40.44" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToggleButton>
+      <Label fx:id="errortext" layoutX="393.0" layoutY="367.0" prefHeight="18.0" prefWidth="418.0" />
+      <Label fx:id="updatetext" layoutX="281.0" layoutY="541.0" prefHeight="18.0" prefWidth="638.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Return_Book_Controller">
+   <children>
+      <ImageView fitHeight="727.0" fitWidth="1106.0" layoutX="-3.0" layoutY="-4.0">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/RENEW_BOOK.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="571.0" layoutX="177.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" width="776.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7881773399014778" startY="0.06403940886699508">
+               <stops>
+                  <Stop color="#e0d690de" />
+                  <Stop color="#ae622bde" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="49.0" fitWidth="57.0" layoutX="5.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/fhome.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="hometoolbar" blendMode="SOFT_LIGHT" contentDisplay="CENTER" layoutX="-9.0" layoutY="299.0" mnemonicParsing="false" onAction="#goToAHome" prefHeight="58.0" prefWidth="74.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="2.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></ToggleButton>
+      <ImageView fitHeight="49.0" fitWidth="57.0" layoutX="6.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/search_image_operation.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="57.0" layoutX="1.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/signoutt.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="signouttoolbar" blendMode="SOFT_LIGHT" layoutX="-10.0" layoutY="421.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="58.0" prefWidth="74.0">
+         <effect>
+            <Lighting diffuseConstant="2.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ToggleButton>
+      <ToggleButton fx:id="operationstoolbar" blendMode="SOFT_LIGHT" layoutX="-10.0" layoutY="360.0" mnemonicParsing="false" onAction="#goToAOperation" prefHeight="58.0" prefWidth="73.0">
+         <effect>
+            <Lighting diffuseConstant="2.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ToggleButton>
+      <Text layoutX="465.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETURN BOOK" underline="true">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="81.0" fitWidth="109.0" layoutX="243.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/logo-withoutbg.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="219.0" layoutY="360.0" prefHeight="200.0" prefWidth="691.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="673.0">
+               <children>
+                  <TableView fx:id="searchtable" layoutY="1.0" prefHeight="200.0" prefWidth="678.0" style="-fx-background-color: #FFFFE0;">
+                     <columns>
+                        <TableColumn fx:id="isbncolumn" prefWidth="154.3999908566475" text="ISBN" />
+                        <TableColumn fx:id="memberidcolumn" prefWidth="150.4000701904297" text="MemberID" />
+                        <TableColumn fx:id="issuedatecolumn" prefWidth="184.800048828125" style="fx-background-color: #80000F;" text="Issue Date" />
+                        <TableColumn fx:id="duedatecolumn" prefWidth="191.99993896484375" style="fx-background-color: #80000F;" text="Due Date" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ToggleButton fx:id="returnbutton" blendMode="HARD_LIGHT" layoutX="524.0" layoutY="577.0" mnemonicParsing="false" onAction="#PerformReturn" text="Return">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="2.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="240.95" color="#75493ff5" elevation="40.44" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToggleButton>
+      <TextField fx:id="searchfield" layoutX="388.0" layoutY="237.0" prefHeight="41.0" prefWidth="418.0" promptText="Member ID" style="-fx-border-color: #800000;" />
+      <Text layoutX="244.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MemberID:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="768.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/asasasddsfdsffds-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="searchbutton" blendMode="HARD_LIGHT" layoutX="757.0" layoutY="238.0" mnemonicParsing="false" onAction="#PerformSearch" prefHeight="39.0" prefWidth="49.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ba7161" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ToggleButton>
+      <Label fx:id="errortext" layoutX="388.0" layoutY="333.0" prefHeight="21.0" prefWidth="418.0" />
+      <Label fx:id="returntext" layoutX="219.0" layoutY="566.0" prefHeight="21.0" prefWidth="303.0" />
+      <Text layoutX="211.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Return Date:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="returndatefield" layoutX="388.0" layoutY="291.0" prefHeight="39.0" prefWidth="418.0" promptText="MM/DD/YY" style="-fx-border-color: #800000;" />
+   </children>
+</AnchorPane>

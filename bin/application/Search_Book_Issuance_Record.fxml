@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Search_Book_Issuance_Record_Controller">
+  <children>
+    <ImageView fitHeight="745.3829956054688" fitWidth="1118.0744623064631" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/pexels-darcy-lawrey-1117153.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="200.0" fitWidth="108.51851399739583" layoutX="-15.0" layoutY="289.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <contentInput>
+            <MotionBlur />
+          </contentInput>
+          <light>
+            <javafx.scene.effect.Light.Distant color="BLACK" />
+          </light>
+        </Lighting>
+      </effect>
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/sidepic.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="520.0" fitWidth="956.0" layoutX="127.0" layoutY="103.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/color-imagesss.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="71.55257415771484" fitWidth="91.08398834048946" layoutX="144.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/logo-withoutbg.png" />
+      </image>
+    </ImageView>
+    <Text layoutX="240.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Search Type:">
+      <font>
+        <Font name="System Bold" size="19.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="240.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:" />
+    <TextField fx:id="searchfield" layoutX="423.0" layoutY="278.0" prefHeight="41.0" prefWidth="418.0" promptText="Search" style="-fx-border-color: #800000;" />
+    <ScrollPane layoutX="235.0" layoutY="349.0" prefHeight="200.0" prefWidth="761.0" style="-fx-border-color: #800000;">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="issuancetable" layoutX="0.0" layoutY="1.0" prefHeight="200.0" prefWidth="745.0" style="-fx-background-color: #FFFFE0;">
+              <columns>
+                <TableColumn fx:id="bookidcolumn" maxWidth="5000.0" minWidth="10.0" prefWidth="131.19994962215424" text="Book ID" />
+                <TableColumn fx:id="memberidcolumn" maxWidth="5000.0" minWidth="6.0" prefWidth="162.39996337890625" text="Member ID" />
+                <TableColumn fx:id="issuedatecolumn" maxWidth="5000.0" minWidth="10.0" prefWidth="148.79998779296875" style="fx-background-color: #80000F;" text="Issue Date" />
+                        <TableColumn fx:id="duedatecolumn" maxWidth="5000.0" minWidth="10.0" prefWidth="146.39999389648438" style="fx-background-color: #80000F;" text="Due Date" />
+                <TableColumn fx:id="returndatecolumn" maxWidth="426.3999938964844" minWidth="10.0" prefWidth="163.20001220703125" style="fx-background-color: #80000F;" text="Return Date" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+      </content>
+    </ScrollPane>
+    <Text layoutX="452.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Book Issuance Record" underline="true">
+      <font>
+        <Font name="System Bold" size="24.0" />
+      </font>
+    </Text>
+    <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="23.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/admin-operations-icon.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="22.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/fhome.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="87.0" fitWidth="49.0" layoutX="14.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/signoutt.png" />
+      </image>
+    </ImageView>
+    <ToggleButton fx:id="hometoolbar" layoutX="11.0" layoutY="299.0" mnemonicParsing="false" onAction="#goToHome" opacity="0.0" prefHeight="50.0" prefWidth="64.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <ToggleButton fx:id="operationtoolbar" layoutX="11.0" layoutY="362.0" mnemonicParsing="false" onAction="#goToOperation" opacity="0.0" prefHeight="50.0" prefWidth="64.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <ToggleButton fx:id="signouttoolbar" layoutX="6.0" layoutY="423.0" mnemonicParsing="false" onAction="#goToLogin" opacity="0.0" prefHeight="62.0" prefWidth="71.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <MenuButton fx:id="searchoptionbutton" layoutX="421.0" layoutY="205.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="418.0" style="-fx-background-color: #FFFFE0;" text="Select Search Type">
+      <items>
+        <MenuItem fx:id="bookidoptionbutton" mnemonicParsing="false" onAction="#ISBN_Action" text="ISBN" />
+        <MenuItem fx:id="memberidoptionbutton" mnemonicParsing="false" onAction="#MEMBERID_Action" text="Member ID" />
+      </items>
+    </MenuButton>
+      <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="802.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/asasasddsfdsffds-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="searchbutton" blendMode="HARD_LIGHT" layoutX="791.0" layoutY="279.0" mnemonicParsing="false" onAction="#PerformSearch" prefHeight="39.0" prefWidth="49.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ba7161" />
+               </light>
+            </Lighting>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </ToggleButton>
+      <Label fx:id="errortext" layoutX="423.0" layoutY="324.0" prefHeight="18.0" prefWidth="418.0" />
+  </children>
+</AnchorPane>

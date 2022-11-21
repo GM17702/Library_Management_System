@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Cancel_Membership_Admin_Controller">
+  <children>
+    <ImageView fitHeight="731.3829888815746" fitWidth="1100.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/pexels-genaro-servín-757855.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="200.0" fitWidth="108.51851399739583" layoutX="-15.0" layoutY="287.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <contentInput>
+            <MotionBlur />
+          </contentInput>
+          <light>
+            <javafx.scene.effect.Light.Distant color="BLACK" />
+          </light>
+        </Lighting>
+      </effect>
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/sidepic.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="471.0" fitWidth="809.0" layoutX="146.0" layoutY="123.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/light-brown-color-solid-background.png" />
+      </image>
+    </ImageView>
+    <ScrollPane layoutX="170.0" layoutY="270.0" prefHeight="200.0" prefWidth="761.0" style="-fx-border-color: #800000;">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+          <children>
+                  <TableView fx:id="feetable" layoutX="584.0" prefHeight="200.0" prefWidth="169.0" style="-fx-background-color: #FFFFE0;">
+                     <columns>
+                        <TableColumn fx:id="feestatuscolumn" prefWidth="157.60003662109375" text="Fee Status" />
+                     </columns>
+                  </TableView>
+            <TableView fx:id="memberdetailtable" layoutX="0.0" layoutY="1.0" prefHeight="200.0" prefWidth="591.0" style="-fx-background-color: #FFFFE0;">
+              <columns>
+                <TableColumn fx:id="memberidcolumn" prefWidth="113.0" text="Member ID" />
+                <TableColumn fx:id="namecolumn" maxWidth="5000.0" minWidth="10.0" prefWidth="162.0" text="Name" />
+                <TableColumn fx:id="addresscolumn" maxWidth="5000.0" minWidth="6.0" prefWidth="165.0" text="Address" />
+                <TableColumn fx:id="pnumcolumn" maxWidth="5000.0" minWidth="10.0" prefWidth="145.0" style="fx-background-color: #80000F;" text="Phone Number" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+      </content>
+    </ScrollPane>
+    <Text layoutX="457.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel Membership" underline="true">
+      <font>
+        <Font name="System Bold" size="24.0" />
+      </font>
+    </Text>
+    <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="23.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/admin-operations-icon.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="22.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/fhome.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="87.0" fitWidth="49.0" layoutX="14.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/DELL/Desktop/New%20folder%20(2)/SDA_Project/src/pictures/signoutt.png" />
+      </image>
+    </ImageView>
+    <ToggleButton fx:id="hometoolbar" layoutX="19.0" layoutY="307.0" mnemonicParsing="false" onAction="#goToHome" opacity="0.0" prefHeight="39.0" prefWidth="57.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <ToggleButton fx:id="operationstoolbar" layoutX="19.0" layoutY="361.0" mnemonicParsing="false" onAction="#goToOperations" opacity="0.0" prefHeight="58.0" prefWidth="58.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <ToggleButton fx:id="signouttoolbar" layoutX="15.0" layoutY="423.0" mnemonicParsing="false" onAction="#goToLogin" opacity="0.0" prefHeight="58.0" prefWidth="49.0" style="-fx-cursor: hand;" text="ToggleButton" />
+    <Button fx:id="cancelmembershipbutton" layoutX="468.0" layoutY="498.0" mnemonicParsing="false" onAction="#PerformCancelMembership" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: #E9967A;" text="Cancel Membership">
+         <font>
+        <Font name="System Bold" size="18.0" fx:id="x2" />
+         </font></Button>
+      <Label fx:id="errortext" layoutX="170.0" layoutY="473.0" prefHeight="18.0" prefWidth="301.0" />
+  </children>
+</AnchorPane>

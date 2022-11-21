@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBook_Controller">
+   <children>
+      <ImageView fitHeight="727.0" fitWidth="1106.0" layoutX="-3.0" layoutY="-4.0">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/managebooks-addbook-pic.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="657.0" fitWidth="929.0" layoutX="121.0" layoutY="105.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/color-imagesss.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="109.0" layoutX="256.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/logo-withoutbg.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="263.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="subjectfield" layoutX="392.0" layoutY="363.0" prefHeight="41.0" prefWidth="418.0" promptText="Enter Subject Category" style="-fx-border-color: #800000;" />
+      <TextField fx:id="publisherfield" layoutX="393.0" layoutY="468.0" prefHeight="41.0" prefWidth="418.0" promptText="Enter Publisher Name" style="-fx-border-color: #800000;" />
+      <Text layoutX="255.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publisher:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="authorfield" layoutX="392.0" layoutY="311.0" prefHeight="41.0" prefWidth="418.0" promptText="Enter Author name" style="-fx-border-color: #800000;" />
+      <Text layoutX="263.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="namefield" layoutX="392.0" layoutY="259.0" prefHeight="41.0" prefWidth="418.0" promptText="Enter Book Name" style="-fx-border-color: #800000;" />
+      <Text layoutX="242.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="isbnfield" layoutX="392.0" layoutY="205.0" prefHeight="41.0" prefWidth="418.0" promptText="Enter ISBN" style="-fx-border-color: #800000;" />
+      <Text layoutX="272.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="223.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publication Date:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="publicationdatefield" layoutX="393.0" layoutY="521.0" prefHeight="31.0" prefWidth="418.0" promptText="MM/DD/YY" style="-fx-border-color: #800000;" />
+      <Text layoutX="480.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD A NEW BOOK" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="194.0" fitWidth="109.0" layoutX="-24.0" layoutY="295.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/vertical-black.jpg" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="submitbutton" layoutX="545.0" layoutY="579.0" mnemonicParsing="false" onAction="#PerformAddBook" prefHeight="39.0" prefWidth="89.0" style="-fx-background-color: E9967A;" text="Submit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </ToggleButton>
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="5.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/fhome.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="hometoolbar" layoutX="2.0" layoutY="309.0" mnemonicParsing="false" onAction="#goToAHome" opacity="0.0" prefHeight="39.0" prefWidth="57.0" text="ToggleButton" />
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="6.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/admin-operations-icon.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="operationtoolbar" layoutX="2.0" layoutY="372.0" mnemonicParsing="false" onAction="#goToAOperation" opacity="0.0" prefHeight="39.0" prefWidth="57.0" text="ToggleButton" />
+      <ImageView fitHeight="87.0" fitWidth="49.0" layoutX="1.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/signoutt.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="signouttoolbar" layoutY="425.0" mnemonicParsing="false" onAction="#goToLogin" opacity="0.0" prefHeight="49.0" prefWidth="57.0" text="ToggleButton" />
+      <TextField fx:id="quantityfield" layoutX="393.0" layoutY="416.0" prefHeight="41.0" prefWidth="418.0" promptText="Enter Quantity" style="-fx-border-color: #800000;" />
+      <Text layoutX="255.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Label fx:id="errortext" layoutX="393.0" layoutY="557.0" prefHeight="18.0" prefWidth="418.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,3 @@
+Member_flag: 0
+Librarian_flag: 0
+Admin_flag: 1

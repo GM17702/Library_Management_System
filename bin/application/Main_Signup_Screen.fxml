@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1100.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main_Signup_Screen_Controller">
+   <children>
+      <ImageView fitHeight="726.0" fitWidth="1107.0" layoutX="-4.0" layoutY="-3.0">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/alfons-morales-YLSwjSy7stw-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="377.0" fitWidth="664.0" layoutX="189.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/color-imagesss.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="78.0" fitWidth="396.0" layoutX="350.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/th-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="99.0" layoutX="213.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/logo-withoutbg.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="usernamefield" layoutX="359.0" layoutY="355.0" prefHeight="39.0" prefWidth="378.0" promptText="Enter a User Name" style="-fx-border-color: #800000;" />
+      <Text layoutX="212.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Type:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text layoutX="213.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Password:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text fill="#1460da" layoutX="620.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login instead" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <Text layoutX="213.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set User Name:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <PasswordField fx:id="passwordfield" layoutX="358.0" layoutY="407.0" prefHeight="39.0" prefWidth="378.0" promptText="Enter a Password" style="-fx-border-color: #800000;" />
+      <MenuButton fx:id="usertypebutton" layoutX="359.0" layoutY="302.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="378.0" style="-fx-background-color: #FFFFE0; -fx-border-color: #800000;" text="Select User Type">
+        <items>
+          <MenuItem fx:id="adminoptionbutton" mnemonicParsing="false" onAction="#AdminAction" text="Admin" />
+            <MenuItem fx:id="librarianoptionbutton" mnemonicParsing="false" onAction="#LibrarianAction" text="Librarian" />
+        </items>
+      </MenuButton>
+      <Button fx:id="signupbutton" layoutX="497.0" layoutY="482.0" mnemonicParsing="false" onAction="#PerformSignup" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #E9967A;" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="signup_to_login_button" layoutX="617.0" layoutY="489.0" mnemonicParsing="false" onAction="#goToLogin" opacity="0.0" prefHeight="26.0" prefWidth="99.0" text="Alt Login" />
+      <ImageView fitHeight="71.0" fitWidth="75.0" layoutX="5.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/DELL/eclipse-workspace/SDA_Project/src/pictures/realexit.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="exitbutton" blendMode="SOFT_LIGHT" contentDisplay="CENTER" layoutY="362.0" mnemonicParsing="false" onAction="#ExitLibrary" prefHeight="62.0" prefWidth="82.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting diffuseConstant="2.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ToggleButton>
+      <Label fx:id="errortext" layoutX="358.0" layoutY="453.0" prefHeight="18.0" prefWidth="378.0" />
+   </children>
+</AnchorPane>
